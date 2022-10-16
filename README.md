@@ -8,7 +8,7 @@ Only extra config arguments are used by livepeer, other are purely informational
 
 * Coin `ETH` (Can choose something else)
 * Miner Name `livepeer`
-* Installation URL `https://github.com/Keybouh/Livepeer-HiveOS/releases/download/v1.0.0/livepeer.tar.gz`
+* Installation URL `https://github.com/MozComputing/Livepeer-HiveOS/releases/download/v1.0.0/livepeer.tar.gz`
 * Hash Algorithm `----`
 * Wallet and worker template `%WAL%`
 * Pool url `null`
