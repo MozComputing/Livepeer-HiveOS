@@ -1,0 +1,20 @@
+.DS_Store
+
+# Ignore the built binary
+cert-manager-webhook-netcup
+_out
+_test
+
+# Test data
+testdata/netcup/config.json
+testdata/netcup/secret.yaml
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
