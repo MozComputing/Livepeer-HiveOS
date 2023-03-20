@@ -1,18 +1,19 @@
 # Livepeer for HiveOS
 
 This is a *custom miner* HiveOS for livepeer - https://github.com/livepeer/go-livepeer
+This miner download and automatically patch your nvidia driver - https://github.com/keylase/nvidia-patch
 
 ### Usage
 
-Only extra config arguments are used by livepeer, other are purely informational.
+You can pass all params into extra config arguments or use HiveOS fields for url and secret.
 
 * Coin `ETH` (Can choose something else)
 * Miner Name `livepeer`
 * Installation URL `https://github.com/MozComputing/Livepeer-HiveOS/releases/download/v1.0.0/livepeer.tar.gz`
 * Hash Algorithm `----`
 * Wallet and worker template `%WAL%`
-* Pool url `null`
-* Pass `x`
+* Pool url `livepeer-orch01.example.com` (Orchestrator URI)
+* Pass `123456789` (Orchestrator secret)
 * Extra config arguments: See at https://docs.livepeer.org/video-miners/reference/configuration
 
 Example for standalone transcoder: `-transcoder -orchAddr <IP_ORCHESTRATOR>:<PORT_ORCHESTRATOR> -orchSecret <SECRET_ORCHESTRATOR>`
@@ -24,9 +25,12 @@ Example for combined orchestrator/transcoder: `-orchestrator -transcoder -networ
 * `-pricePerUnit` is used to specify the price (wei per pixel) for transcoding. The flag is required on startup, but the value can be changed later
 * `-serviceAddr` is used to specify the publicly accessible address that the orchestrator should receive requests at. Changing this requires a blockchain transaction, so it's preferable to use a hostname for a domain you own, not an IP address that may change
 
+`-transcoder` is added if not set
+`-nvidia all` is added if not set
+
 ### Update miner
 
-This miner automatically checks the new version and update at each restart.
+This miner automatically checks the new livepeer version and update at each restart.
 
 The current version is saved on a file version. If you want to reinstall you can delete this file: `rm /hive/miners/custom/livepeer/version`
 
