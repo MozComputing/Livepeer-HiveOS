@@ -10,7 +10,7 @@ You can pass all params into extra config arguments or use HiveOS fields for url
 
 * Coin `ETH` (Can choose something else)
 * Miner Name `livepeer`
-* Installation URL `https://github.com/MozComputing/Livepeer-HiveOS/releases/download/v1.0.0/livepeer.tar.gz`
+* Installation URL `https://github.com/MozComputing/Livepeer-HiveOS/releases/download/v1.1.0/livepeer-1.1.0.tar.gz`
 * Hash Algorithm `----`
 * Wallet and worker template `%WAL%`
 * Pool url `livepeer-orch01.example.com` (Orchestrator URI)
