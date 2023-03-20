@@ -5,6 +5,23 @@ cd `dirname $0`
 . h-manifest.conf
 . colors
 
+url_nvidia_patch="https://github.com/keylase/nvidia-patch"
+
+echo -e "${YELLOW}> Downloading ${url_nvidia_patch}${NOCOLOR}"
+git clone "$url_nvidia_patch"
+
+chown -R user ./nvidia-patch/patch.sh
+chown -R user ./nvidia-patch/patch-fbc.sh
+chmod +x ./nvidia-patch/patch.sh
+chmod +x ./nvidia-patch/patch-fbc.sh
+
+echo -e "${GREEN}Patching nvidia driver...${NOCOLOR}"
+
+./nvidia-patch/patch.sh
+./nvidia-patch/patch-fbc.sh
+
+rm ./nvidia-patch -rf
+
 latestVersion=$(curl --silent "https://api.github.com/repos/livepeer/go-livepeer/releases/latest" |
   grep '"tag_name":' |
   sed -E 's/.*"([^"]+)".*/\1/')
