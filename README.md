@@ -1,6 +1,7 @@
 # Livepeer for HiveOS
 
 This is a *custom miner* HiveOS for livepeer - https://github.com/livepeer/go-livepeer
+
 This miner download and automatically patch your nvidia driver - https://github.com/keylase/nvidia-patch
 
 ### Usage
@@ -26,6 +27,7 @@ Example for combined orchestrator/transcoder: `-orchestrator -transcoder -networ
 * `-serviceAddr` is used to specify the publicly accessible address that the orchestrator should receive requests at. Changing this requires a blockchain transaction, so it's preferable to use a hostname for a domain you own, not an IP address that may change
 
 `-transcoder` is added if not set
+
 `-nvidia all` is added if not set
 
 ### Update miner
